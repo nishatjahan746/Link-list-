@@ -1,0 +1,6 @@
+def reversse(link_list):
+    nodes = link_list.split("<->")
+    nodes.reverse()
+    print("<->".join(nodes))
+
+reversse("7<->12<->8<->65<->10")
