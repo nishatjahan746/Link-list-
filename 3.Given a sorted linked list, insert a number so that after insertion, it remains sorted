@@ -1,0 +1,18 @@
+def inserted(link_list, num):
+    node = link_list.split("->") 
+    nums = []
+
+    for n in node:
+        if n != "":
+            nums.append(int(n))   
+
+    nums.append(num)              
+    nums.sort()                 
+    result = []
+    for n in nums:                
+        result.append(str(n))     
+
+    print("->".join(result))     
+
+
+inserted("1->6->7->9->11", 3)
