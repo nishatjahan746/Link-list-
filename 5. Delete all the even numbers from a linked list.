@@ -1,0 +1,6 @@
+def even_nodes(linked_list):
+    nodes = linked_list.split("->")
+    odd = [node for node in nodes if int(node) % 2 != 0]
+    result = "->".join(odd)
+    print(result)
+even_nodes("1->4->6->7->9->11")
