@@ -1,0 +1,4 @@
+link_list = "34->12->55->42->11"
+nodes = link_list.split("->")
+size = len(nodes)
+print(size)
