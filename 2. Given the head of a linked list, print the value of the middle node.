@@ -1,0 +1,9 @@
+def middle(linked_list):
+    nodes = linked_list.split("->")
+    if len(nodes)%2 == 0:
+        middle = len(nodes)//2 - 1
+    else:
+        middle = len(nodes)//2
+    print(nodes[middle])
+middle("34->12->55->42->11") 
+middle("12->8->65->10") 
