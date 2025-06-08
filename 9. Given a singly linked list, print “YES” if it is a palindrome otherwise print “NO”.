@@ -1,0 +1,30 @@
+class Node:
+    def __init__(self,val):
+        self.val = val
+        self.next = None
+def palindrome(head):
+    value = []
+    temp = head
+    while temp:
+        value.append(temp.val)
+        temp = temp.next
+    n = len(value)
+    palin = True
+    for i in range(n//2):
+        if value[i] != value[n - i - 1]:
+           palin = False
+           break
+    if palin:
+        print("yes")
+    else:
+        print("no")
+def create_list(arr):
+    head = Node(arr[0])
+    curr = head
+    for x in arr[1:]:
+        curr.next = Node(x)
+        curr = curr.next
+    return head
+palindrome(create_list([1, 2, 2, 1]))  
+palindrome(create_list([1, 2, 3, 1])) 
+
