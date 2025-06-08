@@ -1,0 +1,7 @@
+def rotate_left(linked_list, k):
+    nodes = linked_list.split("->")   
+    k = k % len(nodes)                
+    rotated = nodes[k:] + nodes[:k]   
+    print("->".join(rotated))        
+
+rotate_left("10->20->30->40->50", 3)
